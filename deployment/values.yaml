@@ -80,3 +80,15 @@ nodeSelector: {}
 tolerations: []
 
 affinity: {}
+
+postgresql:
+  global:
+    postgresql:
+      postgresqlUsername: root
+      postgresqlPassword: netapp
+      nameOverride: postgresql
+      fullnameOverride: postgresql
+  service:
+    type: "NodePort"
+  persistence:
+    enabled: false
